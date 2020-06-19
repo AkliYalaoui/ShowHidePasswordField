@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+form {
+    padding: 20px;
+}
+
+form input {
+    outline: none;
+    border: none;
+    height: 30px;
+}
+
+form input:focus {
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+form span {
+    cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    height: 30px;
+    
+}
