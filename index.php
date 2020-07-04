@@ -13,14 +13,17 @@
 <body>
     <div id="vue-app">
         <form action="">
-            <input :type="inputField" ref="inputPswd" >
+            <input 
+                  <?php  if(!strpos($_SERVER['HTTP_USER_AGENT'],'Edg'))
+                           echo ':type="inputField"';
+                         else
+                            echo 'type="password"'; ?>  ref="inputPswd" >
             <!--            prevent the default behavior-->
+            <?php  if(!strpos($_SERVER['HTTP_USER_AGENT'],'Edg')){ ?>
             <span @click="ToggleVisibility" :title="titleValue" class="material-icons">
                 {{spanIcon}}
-            </span>
+            </span> <?php } ?>
         </form>
-
-
     </div>
     <script src="app.js"></script>
 </body></html>
